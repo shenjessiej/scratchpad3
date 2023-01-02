@@ -1,1 +1,1 @@
-web: gunicorn 'scratchpad:create_app()'
+web: gunicorn 'app:app'
