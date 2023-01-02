@@ -1,0 +1,71 @@
+
+#editor-dragbar {
+    background-color: #222222;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    cursor: col-resize;
+    opacity: 1;
+}
+
+#navbar {
+    position: absolute;
+    height: 31px;
+    top: 0px;
+    left: 0;
+    right: 50%;
+    background: #1c1c1c;
+    color: #666666;
+    transition: all 0.15s;
+    -moz-transition: all 0.15s;
+    -webkit-transition: all 0.15s;
+    overflow: hidden;
+}
+
+#navbar #title {
+    display: inline-block;
+    text-decoration: none;
+    border: 0;
+    color: #aaa;
+    padding: 8px 5px 7px 10px;
+    font-size: 12px;
+    font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+#navbar #title:hover {
+    background: #2D2D2D;
+}
+
+#titleinput {
+    position: absolute;
+    width: 90%;
+    padding: 8px 5px 7px 10px;
+    background: #1c1c1c;
+    color: #aaa;
+    opacity: .6;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+    border: none;
+}
+
+#newpage {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    top: 0;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 20px;
+    line-height: 25px;
+}

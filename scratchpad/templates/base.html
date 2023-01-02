@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='dwemoji.webp') }}">
+
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 31px;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            z-index: 4;
+        }
+
+        #preview {
+            position: absolute;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            bottom: 0;
+            right: 0;
+            border: 0px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <div id="title">{{ title }}</div>
+    <div id="newpage">+</div>
+</div>
+
+<div id="editor-wrap">
+    <div id="editor">
+        {{ post }}
+    </div>
+    <div id="editor-dragbar"></div>
+</div>
+
+<iframe id="preview"></iframe>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="static/libs/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<script src="{{ url_for('static', filename='scratchpad.js') }}" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='scratchpad.css') }}">
+
+
+</body>
+</html>

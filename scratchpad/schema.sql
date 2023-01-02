@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS post;
+
+CREATE TABLE user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  saved_posts TEXT[]
+);
+
+CREATE TABLE post (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  url_identifier TEXT NOT NULL,
+  code_content TEXT NOT NULL,
+  page_title TEXT NOT NULL
+);
