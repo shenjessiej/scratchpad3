@@ -25,7 +25,7 @@ intro = """<style>
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://xgxonksytjtkkx:accde567c0f6c53dd5222626bc6bd0166a4b125ef53bdf3f4d9fa7d14816a06e@ec2-34-207-12-160.compute-1.amazonaws.com:5432/df25pccam6jup5'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://xgxonksytjtkkx:accde567c0f6c53dd5222626bc6bd0166a4b125ef53bdf3f4d9fa7d14816a06e@ec2-34-207-12-160.compute-1.amazonaws.com:5432/df25pccam6jup5'
     
 db = SQLAlchemy(app)
 app.app_context().push()
