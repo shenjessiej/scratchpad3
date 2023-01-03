@@ -84,7 +84,9 @@ $(document).ready(function () {
 
 // Ace Editor setup
 
-var editor = ace.edit("editor");
+var editor = ace.edit("editor", {
+    wrap: true
+});
 editor.setTheme("ace/theme/tomorrow_night_eighties");
 editor.setHighlightActiveLine(false);
 editor.getSession().setTabSize(2);
@@ -115,11 +117,11 @@ $('#editor-dragbar').mousedown(function (e) {
     e.preventDefault();
     window.dragging = true;
 
-    var editor = $('#editor');
-    var right_offset = editor.offset().right + wpoffset;
+    var ace_editor = $('#editor');
+    var right_offset = ace_editor.offset().right + wpoffset;
 
     // Set editor opacity to 0 to make transparent so our wrapper div shows
-    editor.css('opacity', 0);
+    ace_editor.css('opacity', 0);
 
     // handle mouse movement
     $(document).mousemove(function (e) {
@@ -142,6 +144,7 @@ $('#editor-dragbar').mousedown(function (e) {
         // Move dragbar
         $('#editor-dragbar').css('opacity', 0.15).css('left', e.pageX);
 
+        editor.resize();
 
     });
 
